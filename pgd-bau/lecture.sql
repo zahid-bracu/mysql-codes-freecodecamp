@@ -84,3 +84,16 @@ SHOW CREATE TABLE classroom;
 --- null check
 SELECT * FROM test WHERE a IS NULL;
 SELECT * FROM test WHERE a IS NOT NULL;
+
+
+
+-- creating table with primary key
+create table student(
+     id char(7),
+     name varchar(10),
+     courses int,
+     PRIMARY KEY (id)
+     );
+
+-- inserting data
+insert into student values ('pgd1727','zahid',4), ('pgd1717','nazmul',5);
