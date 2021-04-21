@@ -63,6 +63,15 @@ SELECT * FROM student WHERE student_id<='4';
 SELECT * FROM student WHERE class IN ('ix','12th');
 ---- = , <= ,  >=  ,  <>  ,  AND  ,  OR
 
+
+--Inner Join--
+SELECT * FROM employee LEFT JOIN branch WHERE employee.emp_id=branch.mgr_id;
+--Left Join--
+SELECT * FROM employee LEFT JOIN branch ON employee.emp_id=branch.mgr_id;
+--Right Join--
+SELECT * FROM employee RIGHT JOIN branch ON employee.emp_id=branch.mgr_id;
+
+
 --update data
 UPDATE servers SET Email = 'zahid@gmail.com' WHERE Server_name='Local Host';
 UPDATE  employee SET name='Zahid Rahman' WHERE name='Zahid' AND email='zahid.mym@gmail.com';
