@@ -61,7 +61,7 @@ SELECT first_name FROM employee UNION SELECT branch_name FROM branch;
 --conditional select
 SELECT * FROM student WHERE student_id<='4';
 SELECT * FROM student WHERE class IN ('ix','12th');
-
+---- = , <= ,  >=  ,  <>  ,  AND  ,  OR
 
 --update data
 UPDATE servers SET Email = 'zahid@gmail.com' WHERE Server_name='Local Host';
