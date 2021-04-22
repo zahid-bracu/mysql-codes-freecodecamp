@@ -56,6 +56,7 @@ SELECT * FROM branch_supplier WHERE supplier_name LIKE '%LLC%';
 '____-10%'
 '____-02%'
 
+-- union
 SELECT first_name FROM employee UNION SELECT branch_name FROM branch;
 
 --conditional select
