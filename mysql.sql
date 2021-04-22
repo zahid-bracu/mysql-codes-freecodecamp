@@ -34,6 +34,10 @@ descirbe table restaurants;
 ALTER TABLE restaurants ADD Email varchar(255);
 ALTER TABLE restaurants DROP Email;
 
+--alter data
+ALTER TABLE employee ADD FOREIGN KEY (branch_id) REFERENCES branch(branch_id) ON DELETE SET NULL;
+
+
 --insert data
 INSERT INTO restaurants(student_id,name) VALUES (1,"zahid");
 
