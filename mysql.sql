@@ -48,6 +48,7 @@ SELECT name FROM student ORDER BY student_id DESC;
 SELECT name FROM student ORDER BY student_id DESC LIMIT 2;
 SELECT first_name AS forename, last_name as surname FROM employee;
 SELECT DISTINCT sex FROM employee;
+SELECT * FROM company WHERE age IN (9,8,10);
 
 --Function
 SELECT COUNT(emp_id) FROM employee;
