@@ -4,49 +4,83 @@
 SELECT 'HELLO WORLD';
 SELECT 1+2;
 
---show all database;
+--SHOW all database;
 SHOW database;
 
--- create database
+-- CREATE database
 CREATE DATABASE University;
 
 --Use / enter into a databse;
 USE University;
 
---show all table
+--SHOW all TABLE
 SHOW TABLES;
 
---describe a table;
-DESCRIBE tableName;
+--describe a TABLE;
+DESCRIBE city;
 
 
--- show all data from a particuler database
+-- SHOW all data FROM a particuler TABLE;
 SELECT * FROM Advisor;
 
---select column with condition
-SELECT s_ID, i_ID FROM ADVISOR WHERE s_ID>30000, i_ID>2000;
+-- 
+
+--SELECT column with condition
+SELECT * FROM instructor WHERE salary>65000;
+--AND
+SELECT * FROM instructor WHERE salary>65000 AND dept_name="finance";
+SELECT name FROM instructor WHERE salary>65000 AND dept_name="finance";
+-- OR
+SELECT name FROM instructor WHERE dept_name="finance" OR dept_name="physics";
+
+--SHOW only distinct == no duplicate
+SELECT DISTINCT dept_name FROM instructor;
+
+-- calculation inside query
+ SELECT id, name,  salary/1000 FROM instructor;
+
+--change column nane while display
+SELECT id as Roll, salary/1000 as Salary FROM instructor;
 
 
---select with another condition
-select * from classroom where building='packard';
+--order asc or desc;
+SELECT name, salary FROM instructor ORDER BY SALARY ASC;
+SELECT name, salary FROM instructor ORDER BY SALARY DESC;
 
+
+--regular expression
+--inside an
+SELECT * FROM student WHERE name  like '%an%';
+--last an
+SELECT * FROM student WHERE name  like '%an';
+--start an
+SELECT * FROM student WHERE name  like 'an%';
+
+
+-- IN
+SELECT name FROM country WHERE Continent IN ('EUROPE');
 
 ---count values;
-select count(*) from classroom;
+SELECT count(*) FROM classroom;
 
 --- limit the data
-select * from classroom limit 6;
+SELECT * FROM classroom LIMIT 6;
 
 ---skip the first one
-select * from classroom 2 offset 4;
+SELECT * FROM classroom LIMIT 2 OFFSET 1;
 
 
----show table information 
-show table status;
+---SHOW TABLE information - advance level information
+SHOW TABLE status;
 
---- show particuler table information
-show table status like 'classroom';
+--- SHOW particuler TABLE information
+SHOW TABLE status like 'classroom';
 
 
---- describe 
-show create table classroom;
+--- describe the CREATE TABLE command;
+SHOW CREATE TABLE classroom;
+
+
+--- null check
+SELECT * FROM test WHERE a IS NULL;
+SELECT * FROM test WHERE a IS NOT NULL;
