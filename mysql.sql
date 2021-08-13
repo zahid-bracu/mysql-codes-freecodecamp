@@ -1,8 +1,15 @@
+--primary key 🔑
+--foreign key = Gray Key
+
+--select
+SELECT 'Hello World';
+SELECT 1+2;
+
 --create database:
 CREATE DATABASE yelp;
 
 --show all databses;
-show databases;
+SHOW databases;
 
 
 --switch to database
