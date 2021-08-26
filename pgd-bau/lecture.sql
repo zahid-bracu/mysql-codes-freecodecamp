@@ -92,8 +92,29 @@ create table student(
      id char(7),
      name varchar(10),
      courses int,
-     PRIMARY KEY (id)
+     PRIMARY KEY (id) --declaring primary key
      );
+-- create table with foreign key
+create table result(
+    id char(7) NOT NULL,
+    result double Not Null,
+    foreign key (id) references student(id)
+    );
 
 -- inserting data
 insert into student values ('pgd1727','zahid',4), ('pgd1717','nazmul',5);
+INSERT INTO student (id,name) VALUES ('pgd1745','sneha');
+
+
+-- update data
+UPDATE student SET courses=5 WHERE name='sneha';
+
+-- add column
+ALTER TABLE table_name ADD column_name data_type;
+ALTER TABLE student ADD cgpa double;
+
+-- delete column
+ALTER TABLE student DROP cgpa;
+
+-- rename table
+ALTER TABLE student RENAME people;
