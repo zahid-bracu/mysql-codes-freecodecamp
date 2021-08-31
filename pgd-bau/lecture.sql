@@ -111,10 +111,19 @@ UPDATE student SET courses=5 WHERE name='sneha';
 
 -- add column
 ALTER TABLE table_name ADD column_name data_type;
-ALTER TABLE student ADD cgpa double;
+ALTER TABLE student ADD cgpa  DOUBLE;
+ALTER TABLE student ADD email varchar(50) NOT NULL;
+
+--modify column
+ALTER TABLE student MODIFY name varchar(100);
+
+-- making a key primary
+ALTER TABLE testing add PRIMARY KEY(id);
 
 -- delete column
 ALTER TABLE student DROP cgpa;
+ALTER TABLE student DROP email;
+
 
 -- rename table
 ALTER TABLE student RENAME people;
